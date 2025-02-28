@@ -43,4 +43,4 @@ GmanTech Solutions Ltd is a technology solutions provider specializing in web de
 - **Website**: [gmantechsolutions.com](#)
 
 ---
-🔥 **Developed & Maintained by [Gideon Kiprotich Bett](https://bettgideon-github-io.vercel.app/)**
+🔥 **Developed & Maintained by [Gideon Bett](https://bettgideon-github-io.vercel.app/)**
