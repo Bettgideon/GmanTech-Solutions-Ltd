@@ -40,7 +40,7 @@ GmanTech Solutions Ltd is a technology solutions provider specializing in web de
 ## 📞 Contact
 - **Email**: [gmantechsolutionsltd@gmail.com](mailto:gmantechsolutionsltd@gmail.com)
 - **Phone**: [+254790729721](tel:+254790729721)
-- **Website**: [gmantechsolutions.com](#)
+- **Website**: [https://gman-tech-solutions-ltd.vercel.app/](#)
 
 ---
 🔥 **Developed & Maintained by [Gideon Bett](https://bettgideon-github-io.vercel.app/)**
