@@ -32,7 +32,7 @@ GmanTech Solutions Ltd is a technology solutions provider specializing in web de
 ## 🛠️ Setup Instructions
 1. **Download or Clone the Repository**
    ```bash
-   git clone https://github.com/Bettgideon/gmantech-site.git
+   git clone https://github.com/Bettgideon/GmanTech-Solutions-Ltd
    ```
 2. **Open `index.html` in a Browser**
    - No extra setup required.
