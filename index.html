@@ -3,15 +3,218 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <title>GmanTech Solutions Ltd</title>
   <link rel="stylesheet" href="styles/style.css">
   <link rel="stylesheet" href="styles/animations.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@2.1.4/css/boxicons.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 
+  <style>
+    /* Default Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Header */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  width: 100%;
+  background: #0e0e0e;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+/* Logo and Company Name */
+.logo-container {
+  display: flex;
+  flex-direction: column; /* Stacks logo and name */
+  align-items: center;
+  text-align: center;
+}
+
+.logo img {
+  height: 50px;
+}
+
+.company-name {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-top: 5px; /* Adds spacing below the logo */
+}
+
+/* Navigation */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links li {
+  display: inline;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-size: 1rem;
+}
+
+/* Toggle Button for Mobile */
+.toggle-btn {
+  display: none;
+  font-size: 1.8rem;
+  background: none;
+  border: none;
+  color: rgba(253, 252, 252, 0.935);
+  cursor: pointer;
+}
+
+/* Hero Section */
+.hero {
+  background-image: url('assets/images/Bg.png'); 
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat; 
+  height: 100vh; 
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+  text-align: center; 
+  color: white;
+  padding: 20px;
+}
+
+.hero-content {
+  max-width: 90%;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 1.2rem;
+}
+
+.cta-button {
+  display: inline-block;
+  background-color: #ff9800;
+  color: white;
+  padding: 12px 24px;
+  font-size: 1.2rem;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background 0.3s ease-in-out;
+}
+
+.cta-button:hover {
+  background-color: #e68900;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  /* Mobile Header */
+  header {
+    flex-direction: column;
+    text-align: center;
+    padding: 10px;
+  }
+
+  .logo-container {
+    margin-bottom: 5px;
+  }
+
+  .toggle-btn {
+    display: block;
+  }
+
+  nav {
+    display: none;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background: inherit;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 15px;
+    padding: 10px 0;
+  }
+
+  nav.active {
+    display: flex;
+  }
+
+  /* Hero Section */
+  .hero {
+    height: 100vh;
+    padding: 10px;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+
+  .cta-button {
+    font-size: 1rem;
+    padding: 10px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Mobile Header */
+  .logo img {
+    height: 40px; /* Reduce logo size on small screens */
+  }
+
+  .company-name {
+    font-size: 1rem;
+  }
+
+  /* Mobile Hero */
+  .hero {
+    height: 100vh;
+    padding: 10px;
+  }
+
+  .hero-content {
+    max-width: 95%;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  p {
+    font-size: 0.95rem;
+  }
+
+  .cta-button {
+    font-size: 0.9rem;
+    padding: 8px 16px;
+  }
+}
+
+  </style>
 </head>
 <body>
+
   <header>
     <div class="logo">
         <img src="assets/images/Gman 1.jpg" alt="GmanTech Solutions Ltd">
@@ -22,8 +225,8 @@
     <button class="toggle-btn" id="toggle-btn">&#9776;</button>
 
     <!-- Navigation Menu -->
-    <nav>
-        <ul class="nav-links" id="nav-links">
+    <nav id="nav-menu">
+        <ul class="nav-links">
             <li><a href="#home">Home</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#services">Services</a></li>
@@ -32,26 +235,27 @@
             <li><a href="privacy-policy.html">Privacy Policy</a></li>
         </ul>
     </nav>
-</header>
+  </header>
 
-  
   <section id="home" class="hero">
-    <div class="sliding-images">
-      <div class="slide" style="background-image: url('assets/images/slide1.jpg');"></div>
-      <div class="slide" style="background-image: url('assets/images/slide2.jpg');"></div>
-      <div class="slide" style="background-image: url('assets/images/slide3.jpg');"></div>
-      <div class="slide" style="background-image: url('assets/images/slide4.jpg');"></div>
-    </div>
     <div class="hero-content">
-      <h1 class="fade-in" style="text-align: center;">Empowering Businesses with Cutting-Edge Digital Solutions</h1>
-      <p class="fade-in" style="text-align: center;">Welcome to GmanTech Solutions Ltd – Your Digital Transformation Partner</p>
-      <div style="display: flex; justify-content: center;">
+      <h1 class="fade-in">Empowering Businesses with Cutting-Edge Digital Solutions</h1>
+      <p class="fade-in">Welcome to GmanTech Solutions Ltd – Your Digital Transformation Partner</p>
+      <div style="margin-top: 20px;">
         <a href="https://wa.me/254790729721" class="cta-button slide-in">Get a Free Consultation Now</a>
       </div>
     </div>
   </section>
-  
-  
+
+  <script>
+    // JavaScript for Mobile Menu Toggle
+    const toggleBtn = document.getElementById("toggle-btn");
+    const navMenu = document.getElementById("nav-menu");
+
+    toggleBtn.addEventListener("click", () => {
+      navMenu.classList.toggle("active");
+    });
+  </script>
   
   <!-- About Section -->
 <section id="about" class="about">
@@ -249,16 +453,7 @@
 <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
 
 
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-      const toggleBtn = document.querySelector(".toggle-btn");
-      const navLinks = document.querySelector("nav ul");
 
-      toggleBtn.addEventListener("click", function () {
-          navLinks.classList.toggle("show");
-      });
-  });
-</script>
 
 
 </body>
