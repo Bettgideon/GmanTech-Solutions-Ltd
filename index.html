@@ -9,43 +9,50 @@
   <link rel="stylesheet" href="styles/animations.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@2.1.4/css/boxicons.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-  
 
 </head>
 <body>
   <header>
     <div class="logo">
-      <img src="Gman 1.jpg" alt="GmanTech Solutions Ltd">
+        <img src="assets/images/Gman 1.jpg" alt="GmanTech Solutions Ltd">
     </div>
     <p class="company-name">GmanTech Solutions Ltd</p>
-    <nav>
-      <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#portfolio">Portfolio</a></li>
-        <li><a href="#blog">Blog</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-    <button class="toggle-btn">Menu</button>
-    <button class="toggle-btn">&#9776;</button>
 
-  </header>
+    <!-- Toggle Button -->
+    <button class="toggle-btn" id="toggle-btn">&#9776;</button>
+
+    <!-- Navigation Menu -->
+    <nav>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="privacy-policy.html">Privacy Policy</a></li>
+        </ul>
+    </nav>
+</header>
+
   
   <section id="home" class="hero">
     <div class="sliding-images">
-      <div class="slide" style="background-image: url('slide1.jpg');"></div>
-      <div class="slide" style="background-image: url('slide2.jpg');"></div>
-      <div class="slide" style="background-image: url('slide3.jpg');"></div>
-      <div class="slide" style="background-image: url('slide4.jpg');"></div>
+      <div class="slide" style="background-image: url('assets/images/slide1.jpg');"></div>
+      <div class="slide" style="background-image: url('assets/images/slide2.jpg');"></div>
+      <div class="slide" style="background-image: url('assets/images/slide3.jpg');"></div>
+      <div class="slide" style="background-image: url('assets/images/slide4.jpg');"></div>
     </div>
     <div class="hero-content">
-      <h1 class="fade-in">Empowering Businesses with Cutting-Edge Digital Solutions</h1>
-      <p class="fade-in">Welcome to GmanTech Solutions Ltd – Your Digital Transformation Partner</p>
-      <a href="https://wa.me/254790729721" class="cta-button slide-in">Get a Free Consultation Now</a>
+      <h1 class="fade-in" style="text-align: center;">Empowering Businesses with Cutting-Edge Digital Solutions</h1>
+      <p class="fade-in" style="text-align: center;">Welcome to GmanTech Solutions Ltd – Your Digital Transformation Partner</p>
+      <div style="display: flex; justify-content: center;">
+        <a href="https://wa.me/254790729721" class="cta-button slide-in">Get a Free Consultation Now</a>
+      </div>
     </div>
   </section>
+  
+  
+  
   <!-- About Section -->
 <section id="about" class="about">
   <div class="about-container">
@@ -74,23 +81,58 @@
 <section id="services" class="services">
   <h2 class="fade-in">Our Services</h2>
   <div class="services-container">
+
       <div class="service-item fade-in">
           <i class="bx bx-code service-icon"></i>
           <h3>Web Development</h3>
           <p>Custom websites, e-commerce platforms, and CMS solutions tailored to your business needs.</p>
       </div>
+
       <div class="service-item fade-in">
           <i class="bx bx-line-chart service-icon"></i>
           <h3>SEO & Digital Marketing</h3>
           <p>Boost your online visibility with strategic SEO, content marketing, and social media campaigns.</p>
       </div>
+
       <div class="service-item fade-in">
           <i class="bx bx-cog service-icon"></i>
           <h3>Management Systems</h3>
           <p>Automate business operations with ERP, CRM, and custom management solutions.</p>
       </div>
+
+      <div class="service-item fade-in">
+          <i class="bx bx-wrench service-icon"></i>
+          <h3>Technical Support</h3>
+          <p>We troubleshoot and fix software issues, resolve system errors, and offer IT consulting.</p>
+      </div>
+
+      <div class="service-item fade-in">
+          <i class="bx bx-desktop service-icon"></i>
+          <h3>Software Installations</h3>
+          <p>Installation and configuration of essential software for business and personal use.</p>
+      </div>
+
+      <div class="service-item fade-in">
+          <i class="bx bx-mail-send service-icon"></i>
+          <h3>Professional Email Services</h3>
+          <p>Setup and management of branded business emails for professional communication.</p>
+      </div>
+
+      <div class="service-item fade-in">
+          <i class="bx bx-group service-icon"></i>
+          <h3>Social Media Management</h3>
+          <p>Grow your brand with expert social media strategies, content creation, and engagement.</p>
+      </div>
+
+      <div class="service-item fade-in">
+          <i class="bx bx-briefcase service-icon"></i>
+          <h3>Professional IT Services</h3>
+          <p>Comprehensive IT solutions including cloud services, network management, and cybersecurity.</p>
+      </div>
+
   </div>
 </section>
+
 
   
   <!-- Portfolio Section -->
@@ -98,28 +140,28 @@
   <h2 class="fade-in">Our Portfolio</h2>
   <div class="portfolio-container">
       <div class="project fade-in">
-          <img src="Landing page.png" alt="Hotel Management System">
+          <img src="assets/images/Landing page.png" alt="Hotel Management System">
           <div class="project-info">
               <h3>Hotel Management System</h3>
               <p>A comprehensive hotel management system with three access levels: Admin, Users, and Delivery Team.</p>
           </div>
       </div>
       <div class="project fade-in">
-          <img src="Rooms.png" alt="Hotel Room Booking">
+          <img src="assets/images/Rooms.png" alt="Hotel Room Booking">
           <div class="project-info">
               <h3>Hotel Room Booking</h3>
               <p>Seamless hotel room booking system that allows clients to reserve rooms with a single click.</p>
           </div>
       </div>
       <div class="project fade-in">
-          <img src="project 3.png" alt="Emergency Response System">
+          <img src="assets/images/project 3.png" alt="Emergency Response System">
           <div class="project-info">
               <h3>Maseno University Emergency Response System</h3>
               <p>A system designed to help students report emergencies digitally, enabling the school's emergency team to respond swiftly with real-time location tracking using maps.</p>
           </div>
       </div>
       <div class="project fade-in">
-          <img src="project 4.png" alt="Emergency Response Dashboard">
+          <img src="assets/images/project 4.png" alt="Emergency Response Dashboard">
           <div class="project-info">
               <h3>Emergency Response Dashboard</h3>
               <p>A dashboard for emergency response teams to monitor and track reported emergencies in real-time, ensuring faster response times and improved safety.</p>
@@ -128,42 +170,49 @@
   </div>
 </section>
 
-  <!-- Contact Section -->
+ <!-- Contact Section -->
 <section id="contact" class="contact">
   <div class="contact-container">
-      <h2 class="fade-in">Get In Touch</h2>
-      <p class="fade-in">We’d love to hear from you! Fill out the form below or reach us via email or phone.</p>
+      <h2 class="fade-in">Contact Us</h2>
+      <p class="fade-in">Have a project in mind or need assistance? Let's connect!</p>
 
       <div class="contact-content">
+          <!-- Contact Form -->
           <form action="mailto:gmantechsolutionsltd@gmail.com" method="post" enctype="text/plain" class="contact-form fade-in">
               <div class="input-group">
-                  <label for="name"><i class="bx bx-user"></i> Name:</label>
-                  <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                  <label for="name"><i class="bx bx-user"></i> Full Name</label>
+                  <input type="text" id="name" name="name" placeholder="Your Name" required>
               </div>
 
               <div class="input-group">
-                  <label for="email"><i class="bx bx-envelope"></i> Email:</label>
-                  <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                  <label for="email"><i class="bx bx-envelope"></i> Email Address</label>
+                  <input type="email" id="email" name="email" placeholder="Your Email" required>
               </div>
 
               <div class="input-group">
-                  <label for="message"><i class="bx bx-message-dots"></i> Message:</label>
+                  <label for="subject"><i class="bx bx-bookmark"></i> Subject</label>
+                  <input type="text" id="subject" name="subject" placeholder="Message Subject" required>
+              </div>
+
+              <div class="input-group">
+                  <label for="message"><i class="bx bx-message-dots"></i> Your Message</label>
                   <textarea id="message" name="message" placeholder="Write your message here..." required></textarea>
               </div>
 
               <button type="submit" class="btn-submit">Send Message</button>
           </form>
 
+          <!-- Contact Details -->
           <div class="contact-info fade-in">
+              <h3>Get in Touch</h3>
               <p><i class="bx bx-mail-send"></i> Email: <a href="mailto:gmantechsolutionsltd@gmail.com">gmantechsolutionsltd@gmail.com</a></p>
               <p><i class="bx bx-phone"></i> Phone: <a href="tel:+254790729721">+254 790 729 721</a></p>
+              <p><i class="bx bx-map"></i> Location: Nairobi, Kenya</p>
           </div>
       </div>
   </div>
 </section>
 
-  
-  <!-- Footer Section -->
 <!-- Footer Section -->
 <footer class="footer">
   <div class="footer-container">
@@ -191,25 +240,26 @@
       </div>
   </div>
 
-  <hr style="width: 100%; border: 1px solid gold; margin: 10px auto;">
 <hr style="width: 100%; border: 1px solid gold; margin: 10px auto;">
 
 <p class="credit">Designed by <a href="https://bettgideon-github-io.vercel.app/">Gideon Bett</a> &copy; <span id="year"></span> All rights reserved.</p>
-
+<a href="privacy-policy.html">Privacy Policy</a></p>
 </footer>
 
 <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
 
 
-  <script src="styles/scripts/script.js"></script>
-  <script>document.addEventListener("DOMContentLoaded", function () {
-    const toggleBtn = document.querySelector(".toggle-btn");
-    const navMenu = document.querySelector("nav ul");
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+      const toggleBtn = document.querySelector(".toggle-btn");
+      const navLinks = document.querySelector("nav ul");
 
-    toggleBtn.addEventListener("click", function () {
-        navMenu.classList.toggle("show"); // Toggle the "show" class
-    });
-});
+      toggleBtn.addEventListener("click", function () {
+          navLinks.classList.toggle("show");
+      });
+  });
 </script>
+
+
 </body>
 </html>

@@ -8,6 +8,7 @@ body {
 }
 
 /* Header and Navigation */
+/* General Header Styles */
 header {
   width: 100%;
   max-width: 100vw;
@@ -17,45 +18,45 @@ header {
   position: sticky;
   top: 0;
   z-index: 1000;
-}
-header {
   display: flex;
-  justify-content: space-between; /* Moves logo left, menu right */
+  justify-content: space-between;
   align-items: center;
 }
 
-
+/* Logo */
 header .logo {
-   height: 60px;
-   width: 60px;
+  height: 60px;
+  width: 60px;
 }
 
-/* Logo Image */
 header .logo img {
-  height: 60px; /* Adjust size as needed */
-  width: auto; /* Maintains aspect ratio */
+  height: 60px;
+  width: auto;
   border-radius: 50px;
-  transition: transform 0.3s ease; /* Smooth hover effect */
+  transition: transform 0.3s ease;
 }
 
 /* Hover Effects for Logo */
 header .logo:hover {
-  transform: scale(1.1); /* Slightly enlarges the circle on hover */
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Enhances shadow on hover */
+  transform: scale(1.1);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
 
 header .logo:hover img {
-  transform: rotate(15deg); /* Adds a slight rotation to the logo on hover */
+  transform: rotate(15deg);
 }
+
+/* Company Name */
 .company-name {
   color: white;
   font-weight: bold;
   text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7);
-  margin-top: 5px; /* Adjust spacing */
+  margin-top: 5px;
   text-align: center;
   font-size: 1.2rem;
 }
 
+/* Navigation */
 nav ul {
   list-style: none;
   margin: 0;
@@ -64,32 +65,6 @@ nav ul {
   flex-wrap: wrap;
   align-items: center;
 }
-
-/* Hide the navigation menu by default on small screens */
-@media (max-width: 768px) {
-  nav ul {
-    display: none;
-    flex-direction: column;
-    position: absolute;
-    top: 60px;
-    left: 0;
-    width: 100%;
-    background: #1f0dc1;
-    padding: 10px 0;
-    z-index: 1000;
-  }
-  
-
-  nav ul li {
-    text-align: center;
-    padding: 10px 0;
-  }
-
-  nav ul.show { /* Show the menu when toggled */
-    display: flex;
-  }
-}
-
 
 nav ul li {
   margin: 0 15px;
@@ -106,14 +81,45 @@ nav ul li a:hover {
   color: #ff6f61;
 }
 
+/* Mobile Menu - Hide by default */
+@media (max-width: 768px) {
+  nav ul {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background: #1f0dc1;
+    padding: 20px 0;
+    z-index: 1000;
+    align-items: center;
+  }
+
+  nav ul li {
+    text-align: center;
+    padding: 15px 0;
+  }
+
+  /* Show menu when 'show' class is added */
+  nav ul.show {
+    display: flex;
+  }
+}
+
+/* Toggle Button */
 .toggle-btn {
-  display: none; /* Hidden on large screens */
+  display: none;
   background: none;
   border: none;
   color: #fff;
   font-size: 2rem;
   cursor: pointer;
   padding: 10px;
+  position: absolute;
+  right: 20px;
+  top: 15px;
+  z-index: 1100;
 }
 
 /* Show the toggle button on mobile */
@@ -124,11 +130,12 @@ nav ul li a:hover {
 }
 
 
+
 /* CTA Button with Background Image */
 .cta-button {
   display: inline-block;
   background: #800000;
-  background-image: url('consulting.jpg'); /* Add the path to your image */
+  background-image: url('assets/images/consulting.jpg'); /* Add the path to your image */
   background-size: cover; /* Ensures the image covers the button */
   background-position: center; /* Centers the image */
   color: #42f008; /* White text */
@@ -163,17 +170,17 @@ nav ul li a:hover {
 /* Adjust for smaller screens */
 @media (max-width: 768px) {
   .hero {
-    height: 80vh; /* Reduce height on smaller screens */
+    height: 70vh; /* Reduce from 100vh */
+    padding: 20px; /* Add padding */
   }
-
   .hero-content h1 {
-    font-size: 1.8rem; /* Smaller heading */
+    font-size: 1.8rem; /* Smaller font */
   }
-
   .hero-content p {
-    font-size: 1rem; /* Smaller text */
+    font-size: 1rem; /* Smaller font */
   }
 }
+
 
 .sliding-images {
   position: absolute;
@@ -196,12 +203,13 @@ nav ul li a:hover {
 }
 
 /* Responsive Adjustments */
-@media (max-width: 768px) { 
+@media (max-width: 768px) {
   .sliding-images .slide {
-    height: 70vh; /* Reduce height for mobile screens */
-    background-size: contain; /* Ensure the full image is visible */
+    height: 60vh; /* Reduce height */
+    background-size: cover; /* Adjust image size */
   }
 }
+
 
 
 @keyframes slideLeft {
@@ -318,6 +326,22 @@ nav ul li a:hover {
   color: #0077b6;
   margin-bottom: 15px;
 }
+/*service/portfolio/project containers*/
+@media (max-width: 768px) {
+  .services-container,
+  .portfolio-container,
+  .contact-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .service-item,
+  .project,
+  .contact-form,
+  .contact-info {
+    width: 90%;
+  }
+}
 
 /* Section Padding */
 section {
@@ -371,116 +395,120 @@ section {
   line-height: 1.4;
 }
 
+/* Contact Section Styling */
 .contact {
-  background-color: #f8f9fa;
+  background: #f9f9f9;
   padding: 60px 20px;
   text-align: center;
 }
 
 .contact-container {
-  max-width: 900px;
-  margin: auto;
+  max-width: 1100px;
+  margin: 0 auto;
 }
 
 .contact h2 {
-  font-size: 2.5rem;
-  color: #0077b6;
+  font-size: 2rem;
+  color: #333;
   margin-bottom: 10px;
 }
 
 .contact p {
-  font-size: 1.2rem;
-  color: #444;
+  font-size: 1.1rem;
+  color: #666;
   margin-bottom: 30px;
 }
 
+/* Contact Content Layout */
 .contact-content {
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-between;
   align-items: flex-start;
+  flex-wrap: wrap;
   gap: 30px;
 }
 
+/* Contact Form */
 .contact-form {
   flex: 1;
   max-width: 500px;
-  background: white;
+  background: #fff;
   padding: 20px;
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.input-group {
-  margin-bottom: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   text-align: left;
 }
 
-.input-group label {
+.contact-form .input-group {
+  margin-bottom: 15px;
+}
+
+.contact-form label {
   display: block;
-  font-weight: bold;
-  margin-bottom: 5px;
-  color: #0077b6;
-}
-
-.input-group input, .input-group textarea {
-  width: 100%;
-  padding: 10px;
   font-size: 1rem;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+  color: #333;
+  margin-bottom: 5px;
 }
 
-.input-group textarea {
-  height: 120px;
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.contact-form textarea {
   resize: none;
+  height: 120px;
 }
 
 .btn-submit {
-  display: inline-block;
-  background-color: #0077b6;
-  color: white;
-  padding: 12px 20px;
-  font-size: 1.2rem;
+  background: #007bff;
+  color: #fff;
+  font-size: 1rem;
+  padding: 12px;
+  width: 100%;
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  width: 100%;
-  transition: 0.3s;
+  transition: background 0.3s;
 }
 
 .btn-submit:hover {
-  background-color: #005f91;
+  background: #0056b3;
 }
 
+/* Contact Info */
 .contact-info {
   flex: 1;
+  max-width: 400px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   text-align: left;
-  max-width: 350px;
+}
+
+.contact-info h3 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 15px;
 }
 
 .contact-info p {
-  font-size: 1.2rem;
-  color: #444;
-  margin-bottom: 15px;
   display: flex;
   align-items: center;
+  font-size: 1rem;
+  color: #555;
+  margin: 10px 0;
 }
 
 .contact-info i {
-  font-size: 1.5rem;
-  color: #0077b6;
+  font-size: 1.2rem;
   margin-right: 10px;
-}
-
-.contact-info a {
-  color: #0077b6;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.contact-info a:hover {
-  text-decoration: underline;
+  color: #007bff;
 }
 
 /* Responsive Design */
@@ -490,10 +518,19 @@ section {
       align-items: center;
   }
 
-  .contact-form, .contact-info {
+  .contact-form,
+  .contact-info {
       width: 100%;
+      text-align: center;
+      padding: 20px;
+  }
+
+  .contact-info p {
+      justify-content: center;
   }
 }
+
+
 .container {
   width: 90%;
   max-width: 1200px;
@@ -515,6 +552,24 @@ section {
   color: white;
   text-align: center;
   padding: 40px 20px;
+}
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    padding: 20px;
+  }
+
+  .footer-box {
+    text-align: center;
+    width: 100%;
+  }
+
+  .social-icons {
+    justify-content: center;
+    margin-top: 10px;
+  }
 }
 
 .footer-container {
